@@ -18,7 +18,9 @@ specifiers:
   react: 17.0.1
   react-beautiful-dnd: 13.1.1
   react-dom: 17.0.1
+  react-movable: 3.2.0
   react-scripts: 4.0.3
+  sortablejs: 1.15.2
   styled-components: 5.3.0
   uuid: 8.3.2
 
@@ -32,6 +34,8 @@ dependencies:
   react: 17.0.1
   react-beautiful-dnd: 13.1.1_react-dom@17.0.1+react@17.0.1
   react-dom: 17.0.1_react@17.0.1
+  react-movable: 3.2.0_react-dom@17.0.1+react@17.0.1
+  sortablejs: 1.15.2
   styled-components: 5.3.0_react-dom@17.0.1+react@17.0.1
   uuid: 8.3.2
 
@@ -11447,6 +11451,16 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: false
 
+  /react-movable/3.2.0_react-dom@17.0.1+react@17.0.1:
+    resolution: {integrity: sha512-Z2C3O8ZTkJoqwGTmwpCd8WJjdugc5F0UNdCdQrVv/jZiIjHOpzgCWHtMo9xwjU0lioJT1donDIQaCPl4x31FtQ==}
+    peerDependencies:
+      react: '>=16.3'
+      react-dom: '>=16.3'
+    dependencies:
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
+    dev: false
+
   /react-redux/7.2.9_react-dom@17.0.1+react@17.0.1:
     resolution: {integrity: sha512-Gx4L3uM182jEEayZfRbI/G11ZpYdNAnBs70lFVMNdHJI76XYtR+7m0MN+eAs7UHBPhWXcnFPaS+9owSCJQHNpQ==}
     peerDependencies:
@@ -12419,6 +12433,10 @@ packages:
     dependencies:
       is-plain-obj: 1.1.0
     dev: true
+
+  /sortablejs/1.15.2:
+    resolution: {integrity: sha512-FJF5jgdfvoKn1MAKSdGs33bIqLi3LmsgVTliuX6iITj834F+JRQZN90Z93yql8h0K2t0RwDPBmxwlbZfDcxNZA==}
+    dev: false
 
   /source-list-map/2.0.1:
     resolution: {integrity: sha512-qnQ7gVMxGNxsiL4lEuJwe/To8UnK7fAnmbGEEH8RpLouuKbeEm0lhbQVFIrNSuB+G7tVrAlVsZgETT5nljf+Iw==}

@@ -1,5 +1,7 @@
 import {Component} from 'react'
+import {List, arrayMove} from 'react-movable'
 import {v4} from 'uuid'
+
 import TaskItem from '../TaskItem'
 import './index.css'
 
@@ -61,8 +63,19 @@ class MyTasks extends Component {
     }))
   }
 
+  reorder = props => {
+    const {todoList} = this.state
+    const {oldIndex, newIndex} = props
+    localStorage.setItem(
+      'todos',
+      JSON.stringify(arrayMove(todoList, oldIndex, newIndex)),
+    )
+    this.setState({todoList: arrayMove(todoList, oldIndex, newIndex)})
+  }
+
   render() {
     const {todoList} = this.state
+
     return (
       <div className="bg">
         <div className="header">
@@ -77,18 +90,29 @@ class MyTasks extends Component {
             Add
           </button>
         </div>
-        <ul className="ul">
-          {todoList.map(eachElement => (
-            <TaskItem
-              taskData={eachElement}
-              key={eachElement.id}
-              toggleStatus={this.toggleStatus}
-              deleteTodo={this.deleteTodo}
-            />
-          ))}
-        </ul>
+
+        <List
+          values={todoList}
+          onChange={this.reorder}
+          renderList={({children, props}) => (
+            <ul {...props} className="ul">
+              {children}
+            </ul>
+          )}
+          renderItem={({value, props}) => (
+            <li {...props}>
+              <TaskItem
+                taskData={value}
+                key={value.id}
+                toggleStatus={this.toggleStatus}
+                deleteTodo={this.deleteTodo}
+              />
+            </li>
+          )}
+        />
       </div>
     )
   }
 }
+
 export default MyTasks

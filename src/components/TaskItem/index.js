@@ -13,7 +13,7 @@ const TaskItem = props => {
   }
 
   return (
-    <li className="li">
+    <div className="li">
       <div className="item-main">
         <input
           type="checkbox"
@@ -35,7 +35,7 @@ const TaskItem = props => {
       <button type="button" onClick={onClickDelete}>
         Delete
       </button>
-    </li>
+    </div>
   )
 }
 
