@@ -1,0 +1,27 @@
+.li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 1px #babfcf;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.item-main {
+  display: flex;
+  align-items: center;
+}
+.checkbox-label {
+  font-family: Roboto;
+  color: #000000;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.checkbox-label-crossed {
+  font-family: Roboto;
+  color: #000000;
+  font-size: 18px;
+  margin-left: 10px;
+  text-decoration: line-through;
+}

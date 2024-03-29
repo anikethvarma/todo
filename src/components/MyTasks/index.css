@@ -1,0 +1,41 @@
+.bg {
+  max-width: 90%;
+  padding: 10px;
+  margin: auto;
+  width: 750px;
+}
+
+.main-heading {
+  color: #041f7a;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-button {
+  background-color: #041f7a;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  color: #ffffff;
+  height: 36px;
+  width: 100px;
+  margin-left: 10px;
+}
+.new-task {
+  height: 36px;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px;
+  margin-left: auto;
+}
